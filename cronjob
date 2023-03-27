@@ -1,0 +1,2 @@
+# Run the Python script every day at 6:00 AM
+0 6 * * * root cd /app && python verge_scraper.py >> /var/log/cron.log 2>&1
