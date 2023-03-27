@@ -1,6 +1,3 @@
-import pytest
-from verge_scraper import VergeScraper
-
 import sqlite3
 import pytest
 import pandas as pd
