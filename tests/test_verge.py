@@ -44,9 +44,9 @@ def test_database_add_article_to_db(database):
     assert row[3] == "Author"
     assert row[4] == "2022/01/01"
 
-def test_database_count_articles_with_title(database):
+def test_database_count_articles_with_url(database):
     database.add_article_to_db("http://example.com", "Title", "Author", "2022/01/01")
-    count = database.count_articles_with_title("Title")
+    count = database.count_articles_with_url("http://example.com")
     assert count == 1
 
 

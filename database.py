@@ -16,8 +16,8 @@ class Database:
                             author TEXT, date TEXT)''')
         self.conn.commit()
     
-    def count_articles_with_title(self, title):
-        self.c.execute("SELECT COUNT(*) FROM articles WHERE headline=?", (title,))
+    def count_articles_with_url(self, url):
+        self.c.execute("SELECT COUNT(*) FROM articles WHERE url=?", (url,))
         return self.c.fetchone()[0]
     
     def add_article_to_db(self, url, headline, author, date):

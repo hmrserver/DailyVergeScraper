@@ -70,7 +70,7 @@ class VergeScraper(Database, CSV):
         self.create_table()
         
         for article in self.unique_articles.values():
-            if article['url'] in self.existing_data_df["url"].values and self.count_articles_with_title(article['title']) > 0:
+            if article['url'] in self.existing_data_df["url"].values and self.count_articles_with_url(article['url']) > 0:
                 continue
             
             new_row = {"id": len(self.existing_data_df), "url": article["url"],
